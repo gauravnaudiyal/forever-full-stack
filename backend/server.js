@@ -16,14 +16,8 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors({
-    origin: [
-      'https://forever-frontend-ebon-five.vercel.app',
-      'https://forever-admin-inky-three.vercel.app'
-    ],
-    credentials: true
-  }))
-  
+app.use(cors())
+
 // api endpoints
 app.use('/api/user',userRouter)
 app.use('/api/product',productRouter)
